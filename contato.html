@@ -1,0 +1,83 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário para Contato</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div id="header">
+
+        <div>
+            <h1>Bem-vindo ao meu portfolio</h1>
+        </div>
+
+        <div class="container"> 
+            <a href="sobre.html">Sobre mim</a>
+            <a href="formacao.html">Formação</a>
+            <a href="portfolio.html">Portfólio</a>
+            <a href="contato.html">Contato</a>
+        </div>
+
+    </div>
+
+
+
+
+    <h1>Formulário para Contato:</h1>
+    <div class="form-container">
+        <form action="" method="" id="formulario">
+        <table >
+
+            <tr>
+
+                <th><label for="nome">Nome:</label></th>
+                <td><input type="text" name="nome" id="nome"></td>
+            </tr>
+
+            <tr>
+                <th><label for="email">E-mail:</label></th>
+                <td><input type="email" name="email" id="email"></td>
+            </tr>
+            
+            <tr>
+                <th><label for="msg">Digite sua Mensagem:</label></th>
+                <td><textarea name="msg" id="msg" rows="5" cols="40" placeholder="Digite sua mensagem"></textarea></td>
+            </tr>
+
+            <tr>
+                <td></td>
+                <td><button type="submit"">Enviar</button></td>
+            </tr>
+
+        </table>
+    </form>
+    </div>
+
+    <p id="mensagem"></p>
+
+    <script>
+        document.getElementById("formulario").addEventListener("submit", function(event){
+        event.preventDefault();
+
+        const nome = document.getElementById("nome").value.trim();
+        const email = document.getElementById("email").value.trim();
+        const msg = document.getElementById("mensagem");
+
+        if (nome === "" || email === "") {
+            msg.textContent= "Por favor! Preencha os campos acima.";
+            msg.style.color = "yellow";
+            alert("Por favor! Preencha os campos acima.");
+            return;
+        }
+
+        msg.textContent = "Formulário enviado com sucesso!";
+        msg.style.color = "green";
+        alert("Formulário enviado com sucesso!");
+    })
+
+        
+    </script>
+</body>
+</html>
