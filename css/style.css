@@ -39,12 +39,18 @@
 -------------Inicio----------------------------------
 **/
     #inicio{
+        text-align: center;
         width: 920px;
         margin: 0% auto;
         padding: 15px;
     }
 
+    #welcome{
+        text-align: center;
+    }
+
     #text{
+        text-align: center;
         width: 660px;
         float: none;
     }
