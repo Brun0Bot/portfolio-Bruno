@@ -89,6 +89,15 @@
   margin: 0;
 }
 
+/**
+-------------Formação----------------------------------
+**/
+#formacao{
+        text-align: center;
+        width: 920px;
+        margin: 0% auto;
+        padding: 15px;
+    }
 
 /**
 -------------Formulario----------------------------------
